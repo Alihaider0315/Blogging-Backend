@@ -10,6 +10,7 @@ const verifyToken=(req,res,next)=>{
             return res.status(403).json("Token Is Not Valid!")
         }
         req.userId=data.id
+        // console.log("Passed")
         next()
     })
 }
